@@ -1,0 +1,293 @@
+html,body
+{
+
+	height:100%;  
+}
+
+//容器
+.main-container
+{
+	padding: 0 ((@grid-gutter-width / 2));
+	min-height:100%;  
+}
+
+ul.steplist{
+	list-style: none;
+	padding-left:0;
+
+	li
+	{
+		display: block;
+		float: left;
+		padding: 5px 10px  5px 0;
+		border-top: 3px solid #f00;
+		.icon
+		{
+			width: 10px;
+			height: 10px;
+			background: red;
+			border-radius: 10px;
+			margin-top: -29px;
+
+		}
+	}
+	
+	li.pass
+	{
+		border-top: 3px solid green;
+		.icon
+		{
+			background: green;
+		}
+	}
+
+}
+
+.login-container
+{
+	padding: 0 ((@grid-gutter-width / 2));
+	min-height:100%;
+	position: relative;
+	background: @navbar-inverse-bg;
+	.login-area
+	{
+		  width: 410px;
+		  position: fixed;
+		  top: 50%;
+		  left: 50%;
+		  margin-left: -210px;
+		  padding: 15px 30px;
+		  background: #fff;
+		  margin-top: -200px;
+		  background: @gray-lighter;
+		  border-bottom: 1px solid @gray-light;
+		  .box-shadow(5px 15px 15px rgba(0,0,0,.5));
+		  i
+		  {
+		  	padding-top: 2px;
+		  	padding-right: 5px;
+		  }
+
+		  button
+		  {
+		  	font-size: 14px;
+		  }
+
+		  p{
+		  	padding: 10px 0 0 0;
+		  	font-weight: 300px;
+		  }
+	}
+	
+}
+
+
+
+.container
+{
+	min-width: 100%;
+}
+
+
+//Nav
+.navbar-brand
+{
+	padding: 0 10px;
+	height: @navbar-height;
+	line-height: @navbar-height;
+}
+
+nav
+{
+	margin: 0 ((-@grid-gutter-width / 2));
+
+	.media
+	{
+		width:300px;
+		margin-top: 0px;
+		padding: 2px;
+		padding-left: 5px;
+		border-bottom: 1px solid @gray-lighter;
+		a
+		{
+			  color:@gray;
+			  &:hover,
+			  &:focus {
+			    text-decoration: none;
+			    cursor: pointer;
+			    .opacity(.5);
+			  }
+		}
+	}
+
+	.media-footer
+	{
+		a
+		{
+			display: block;
+			  color:@gray;
+			  background: @brand-primary;
+			  &:hover,
+			  &:focus {
+			    text-decoration: none;
+			    cursor: pointer;
+			    .opacity(.5);
+			  }
+		}
+	}
+}
+
+.workspace-tab
+{
+	margin-top: ((@grid-gutter-width / 2));
+}
+
+.workspace
+{
+	border: 1px solid @nav-tabs-border-color;
+	border-top: 0px solid transparent;
+	margin-bottom:((@grid-gutter-width / 2));
+}
+
+//Panel
+.panel
+{
+	padding: 0px;	    
+	min-height: @panel-height;
+	margin-bottom: @grid-gutter-width ;    
+	.transition(none);
+	.panel-heading
+	{
+	  padding: ((@grid-gutter-width / 2)) @grid-gutter-width;
+	  background:@panel-heading;
+	  font-size: 12px;
+	  font-weight:bold;
+	}
+
+
+	&:hover {
+       .box-shadow(0px 0px 8px rgba(0,0,0,.2));
+      }
+
+
+	.navbar
+	{
+		background: lighten(#000, 98%);
+		margin-bottom: 0px;
+		min-height: 0px;
+		.nav li a
+		{
+			padding: ((@grid-gutter-width / 2)) ((@grid-gutter-width / 2)) ;
+		}
+
+		.navbar-form
+		{
+			margin: 0;
+		}
+	}
+}
+
+
+//footer
+.footer
+{
+	color:@gray-lighter;
+	background: @navbar-inverse-bg;
+	height: ((@footer-height - 2px));
+	line-height: ((@footer-height - 2px));
+	margin-top: -@footer-height;
+
+}
+
+.footer-stub
+{
+	display: block;
+	height: @footer-height;
+}
+
+//pagination
+
+.pagination
+{
+	margin:2px 0;
+}
+
+.table
+{
+	margin-bottom:0;
+
+	thead tr
+	{
+		background: @table-heading;
+	}
+}
+
+.table-footer
+{
+	line-height: @footer-height;
+}
+
+.page-header {
+  margin: 0 0 10px;
+  border-bottom: 1px solid @page-header-border-color;
+
+}
+
+//nav
+.nav-tabs
+{
+	background: lighten(#000, 98%);
+}
+.tab-content
+{
+	min-height: 100px;
+}
+
+//modal
+.modal-header {
+	background: lighten(#000, 95%);
+}
+.modal-footer {
+	margin-top: 0;
+	background: lighten(#000, 95%);
+}
+
+//form
+.form-horizontal .form-group
+{
+	margin:0;
+	margin-bottom: @grid-gutter-width;
+}
+
+.legend
+{
+	margin-bottom: @grid-gutter-width;
+}
+
+.form-horizontal .form-group select option
+{
+	width: 100%;
+}
+
+.searcharea
+{
+	label{
+		min-width:60px;
+		text-align: right;
+		padding-right: 3px;
+	}
+
+	.form-control{
+		width:150px;
+	}
+
+	.bootstrap-select {
+		width:150px;
+	}
+}
+
+.alert
+{
+	margin-bottom: 5px;
+}
+

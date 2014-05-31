@@ -1,0 +1,148 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/Font-Awesome/css/font-awesome.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+<body ng-app="biz4uAppApp">
+  <!--[if lt IE 7]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <!-- Add your site or application content here -->
+  <div class="main-container page-container">
+    <div class="nav-area">
+      <a class="navbar-brand" href="#"><!--
+      <img src="content/img/logo1.png" style="margin-top:4px;"/>-->
+      Biz4U App
+      </a>
+      <nav class="navbar-default navbar-inverse" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+          <div id="navdiv">
+            <ul class="nav navbar-nav">
+              <li role="menu"><a href="javascript:void(0)" data-url="http://www.sohu.com" data-wid="home"><i class="fa fa-home fa-fw"></i> 首页</a></li>
+              <li class="dropdown" ><a href="javascript:void(0)" class="dropdown-toggle"><i class="fa fa-cogs fa-fw"></i> 管理 <b class="caret"></b></a>
+                <ul  class="dropdown-menu">
+                  <li role="menu"><a href="javascript:void(0)" data-url="http://www.baidu.com" data-wid="org">组织管理</a></li>
+                  <li role="menu"><a href="javascript:void(0)" data-url="http://www.sina.com" data-wid="module">模块管理</a></li>
+                  <li role="menu"><a href="javascript:void(0)" data-url="form.htm" data-wid="form">表单管理</a></li>
+                  <li><a href="javascript:void(0)">流程管理</a></li>
+                  <li><a href="javascript:void(0)">权限管理</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa  fa-envelope-o fa-fw"></i>
+              消息中心
+              <span id="todoCount" class="badge"  data-toggle="tooltip" title="xxx">10</span>
+              <span id="todoCount1" class="badge" style="background:#f00">6</span>
+              </a>
+              <ul class="dropdown-menu">
+                
+                <li class="media-footer">
+                  <a href="/TodoListMng/TodoList/Index">进入消息中心</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user fa-fw"></i> Admin <b class="caret"></b>
+              
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/Admin/User/SelfIndex">
+                  <i class="fa fa-cog fa-fw"></i>
+                  个人设置
+                  </a>
+                </li>
+                <li>
+                  <a href="/Account/Logout">
+                  <i class="fa fa-sign-out fa-fw"></i>
+                  退出
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    
+    <ul class="nav nav-tabs workspace-tab">
+      <li class="active"><a href="#home" data-toggle="tab">首页 </a> </li>
+      
+    </ul>
+    <div class="container workspace">
+      <div class="row">
+        <div class="col-md-12 paddingfix tab-content">
+          
+          <div class="tab-pane active workspace-panel" id="home" style="width:100%;height:100%;">
+            
+            <div class="container" ng-view=""></div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-stub"></div>
+  </div>
+  <div class="container footer">
+    <div class="row">
+      <div class="col-md-6">Copyright &copy biz4u 2014</div>
+      <div class="col-md-6 text-right">Version:0.1</div>
+    </div>
+  </div>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+  </script>
+  <!--[if lt IE 9]>
+  <script src="bower_components/es5-shim/es5-shim.js"></script>
+  <script src="bower_components/json3/lib/json3.min.js"></script>
+  <![endif]-->
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
