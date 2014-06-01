@@ -3,5 +3,5 @@
 
 angular.module('biz4uAppApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [];
+    $scope.awesomeThings = ['x','xf','sdf'];
   });
