@@ -3,11 +3,12 @@
 
 angular
   .module('biz4uAppApp', [
-    'ui.bootstrap',
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap',
+    'ui.router'
   ])
   .config(function ($routeProvider) {
     $routeProvider
