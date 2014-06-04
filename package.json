@@ -20,6 +20,7 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-auto-install": "^0.1.1",
     "grunt-autoprefixer": "~0.4.0",
     "grunt-banner": "^0.2.3",
     "grunt-bower-install": "~1.0.0",
