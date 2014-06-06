@@ -1,8 +1,9 @@
 
 'use strict';
 
-var app = angular.module('biz4uAppApp');
-
-app.controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = ['x','xf','sddfdffddddddddddd'];
-  });
+function DemoController($scope,demoModel) {
+	this.scope = $scope;
+	this.scope.awesomeThings = ['s','d','df'];
+	this.scope.vm = demoModel;
+	return (this);
+}

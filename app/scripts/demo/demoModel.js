@@ -1,4 +1,6 @@
 
 'use strict';
 
-angular.module('biz4uAppApp');
+function DemoModel(demoService){
+	this.xx = demoService.echo();
+}
