@@ -41,14 +41,14 @@
         <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
           <div id="navdiv">
             <ul class="nav navbar-nav">
-              <li role="menu"><a href="javascript:void(0)" data-url="http://www.sohu.com" data-wid="home"><i class="fa fa-home fa-fw"></i> 首页</a></li>
-              <li class="dropdown" ><a href="javascript:void(0)" class="dropdown-toggle"><i class="fa fa-cogs fa-fw"></i> 管理 <b class="caret"></b></a>
-                <ul  class="dropdown-menu">
-                  <li role="menu"><a href="javascript:void(0)" data-url="http://www.baidu.com" data-wid="org">组织管理</a></li>
-                  <li role="menu"><a href="javascript:void(0)" data-url="http://www.sina.com" data-wid="module">模块管理</a></li>
-                  <li role="menu"><a href="javascript:void(0)" data-url="form.htm" data-wid="form">表单管理</a></li>
-                  <li><a href="javascript:void(0)">流程管理</a></li>
-                  <li><a href="javascript:void(0)">权限管理</a></li>
+              <li><a><i class="fa fa-home fa-fw"></i> 首页</a></li>
+              <li class="dropdown" ><a class="dropdown-toggle"><i class="fa fa-cogs fa-fw"></i> 管理 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a>组织管理</a></li>
+                  <li><a>表单管理</a></li>
+                  <li><a>模块管理</a></li>
+                  <li><a>流程管理</a></li>
+                  <li><a>权限管理</a></li>
                 </ul>
               </li>
             </ul>
@@ -90,23 +90,19 @@
         </div>
       </nav>
     </div>
-    
-    <ul class="nav nav-tabs workspace-tab">
-      <li class="active"><a href="#home" data-toggle="tab">首页 </a> </li>
+
+    <tabset class="workspace-tab">
       
-    </ul>
-    <div class="container workspace">
-      <div class="row">
-        <div class="col-md-12 paddingfix tab-content">
-          
-          <div class="tab-pane active workspace-panel" id="home" style="width:100%;height:100%;">
-            
-            <div class="container" ng-view=""></div>
-          </div>
-          
-        </div>
+    <tab heading="Vertical 1">
+      <div class="container workspace">
+        <div class="container" ng-view=""></div>
       </div>
-    </div>
+    </tab>
+    <tab heading="Vertical 2">
+      <div class="container workspace">Vertical content 2</div>
+    </tab>
+  </tabset>
+    
     
     <div class="footer-stub"></div>
   </div>
@@ -143,7 +139,13 @@
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>
-  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/router.js"></script>
+  <script src="scripts/common/directive.js"></script>
+  <script src="scripts/common/filter.js"></script>
+
+  <script src="scripts/demo/demoController.js"></script>
+  <script src="scripts/demo/demoModel.js"></script>
+  <script src="scripts/demo/demoService.js"></script>
   <!-- endbuild -->
 </body>
 </html>

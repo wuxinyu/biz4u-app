@@ -5978,6 +5978,9 @@ html,
 body {
   height: 100%;
 }
+a {
+  cursor: pointer;
+}
 .main-container {
   padding: 0 5px;
   min-height: 100%;

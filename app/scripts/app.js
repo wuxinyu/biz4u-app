@@ -7,13 +7,11 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'ui.bootstrap',
-    'ui.router'
-  ])
-  .config(function ($routeProvider) {
+    'ui.bootstrap'
+  ]).config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/demo/main.html',
         controller: 'MainCtrl'
       })
       .otherwise({
