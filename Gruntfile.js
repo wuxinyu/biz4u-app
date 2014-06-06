@@ -85,31 +85,28 @@ module.exports = function (grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
+      options: {
+        livereload: true,
+      },
       bower: {
         files: ['bower.json'],
         tasks: ['bowerInstall']
       },
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-        tasks: ['newer:jshint:all'],
-        options: {
-          livereload: true
-        }
+        tasks: ['newer:jshint:all']
       },
       css: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        options: {
-          livereload: true
-        }
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css']
       },
       jsTest: {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
-      // styles: {
-      //   files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-      //   tasks: ['newer:copy:styles', 'autoprefixer']
-      // },
+      styles: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
+        tasks: ['newer:copy:styles', 'autoprefixer']
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       },
