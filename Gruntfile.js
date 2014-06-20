@@ -59,20 +59,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    coffee:{
-      all:{
-        expand:true,
-        bare: true,
-        cwd: '<%= yeoman.app %>/coffee/',
-        src: '**/*.coffee',
-        dest: '<%= yeoman.app %>/scripts',
-        ext: '.js'
-      }
-    },
-    coffeelint:
-    {
-      all: ['<%= yeoman.app %>/coffee/{,*/}*.coffee']
-    },
     usebanner: {
       options: {
         position: 'top',
@@ -124,14 +110,6 @@ module.exports = function (grunt) {
         files: '<%= yeoman.app %>/less/{,*/}*.less',
         tasks: 'less-compile',
         options:{
-          livereload: false
-        }
-      },
-      coffeescript:{
-        files:'<%= yeoman.app %>/coffee/{,*/}*.coffee',
-        tasks:'coffeelint:coffee',
-        options:{
-          spawn:false,
           livereload: false
         }
       }
@@ -461,8 +439,6 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'less-compile',
-    'coffeelint',
-    'coffee',
     'bowerInstall',
     'useminPrepare',
     'concurrent:dist',
