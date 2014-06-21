@@ -17,7 +17,9 @@
     "type": "MIT",
     "url": "https://github.com/wuxinyu/biz4u-app/LICENSE"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.4.4"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-auto-install": "^0.1.1",
